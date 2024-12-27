@@ -1,24 +1,24 @@
-<h1>Network Traffic Analysis & Decryption with Logging Tool</h1>
+<h1>Firewall Configuration & Management</h1>
 
 
 <h2>Description</h2>
 
-This project consists of a set of Linux scripts designed for network traffic analysis and decryption. The utility leverages TCPDump to capture TCP traffic and provides automated tools for cyber forensic investigations. The scripts enable users to capture network packets, organize and parse the data, and decrypt the content of the captured traffic for further analysis. This project simplifies the process of extracting meaningful insights from network traffic while showcasing expertise in scripting, forensics, and decryption techniques.
+This project focuses on configuring and managing the Uncomplicated Firewall (UFW) on Linux systems to enhance network security. It involves defining rules to allow or deny specific traffic based on ports, protocols, and IP addresses, such as permitting SSH access while blocking all other incoming traffic by default. Logging is enabled to monitor and analyze firewall activity, providing real-time insights and supporting forensic investigations. By streamlining rule management and integrating robust monitoring, this project demonstrates expertise in Linux security, scripting, and traffic control.
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>Bash</b> 
-- <b>TCPDump</b>
-- <b>Wireshark</b>
-- <b>Tshark</b>
+- <b>UFW (Uncomplicated Firewall)</b>
+- <b>Journald</b>
+- <b>Nmap</b>
    
 <h2>Environments Used </h2>
 
 - <b>Operating System: Kali Linux</b> (via VirtualBox on Windows 11 22H2)
-- <b>Network Environment: Local traffic capture from Google searches</b>
-- <b>Development/Testing Tools: Visual Studio Code, VirtualBox</b>
+- <b>Network Environment: Local network traffic analysis, utilizing Nmap scans from a separate machine to simulate various traffic patterns and test UFW rule enforcement.</b>
+- <b>Development/Testing Tools: VirtualBox, PowerShell</b>
 
 <h2>Program walk-through:</h2>
 
