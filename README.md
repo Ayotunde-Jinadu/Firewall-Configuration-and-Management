@@ -24,23 +24,25 @@ This project focuses on configuring and managing the Uncomplicated Firewall (UFW
 
 <p align="center">
 The first step in configuring the UFW Firewall is to ensure the system is up-to-date. This is done by running sudo apt update to refresh the package list and sudo apt upgrade to install the latest updates. Keeping the system updated ensures compatibility and security for subsequent firewall configurations. : <br/>
-<img src="https://i.imgur.com/HIirxt5.png" height="80%" width="80%" alt="Disk Sanitisation"/>
+<img src="https://i.imgur.com/HIirxt5.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
 The next step is to install UFW using the package manager. Running sudo apt install ufw ensures the firewall utility is installed and ready for configuration. This step provides the foundational tool required to manage and enforce firewall rules effectively. :  <br/>
-<img src="https://i.imgur.com/J5KzNAa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/J5KzNAa.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-I tested the functionality of watchdog.sh to ensure it effectively captured and logged network traffic as intended. This involved running the script, verifying that sequential dump files were created correctly based on the specified size limit, and confirming the captured data was accurate and complete. : <br/>
-<img src="https://imgur.com/lcp5j95.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+After installation, UFW is enabled by executing sudo ufw enable. This activates the firewall, applying the default rules to secure the system while allowing further customization for specific traffic management needs. : <br/>
+<img src="https://i.imgur.com/176G82m.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-I used Wireshark to open and analyze the captured packets in greater detail, utilizing its advanced filtering and highlighting features to identify and examine any encrypted data collected by TCPdump. :  <br/>
-<img src="https://imgur.com/DTF5YC3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+To ensure uninterrupted remote access, SSH connections are allowed by running sudo ufw allow ssh or sudo ufw allow 22. This rule permits traffic on port 22, preventing accidental lockout from the system during further firewall configuration. :  <br/>
+<img src="https://i.imgur.com/EeJ91ob.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-I captured the private key used by the browser during an SSL handshake by setting the SSLKEYLOGFILE environment variable to specify the file path for storing private keys. This allowed the browser to log the keys used in SSL encryption. I then switched the host from google.com to nhs.uk to generate more traffic and encrypted data for capture, providing a richer dataset for analysis. :  <br/>
-<img src="https://imgur.com/xZVSOJg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Traffic rules are configured to permit necessary services and connections by allowing specific ports, port ranges, and services like HTTP and HTTPS. Rules are also set to allow traffic from particular IP addresses and subnets, ensuring controlled access to the system while maintaining security. These configurations are tailored to meet the specific requirements of the network environment. :  <br/>
+<img src="https://i.imgur.com/9MmqiIX.png" height="80%" width="80%"
+<br />
+<img src="https://i.imgur.com/IC8UhIq.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
 I configured the protocol by setting the TLS Pre-Master Secret log file, enabling the decryption of captured encrypted traffic. This allowed me to analyze the encrypted data in plain text for detailed examination. :  <br/>
