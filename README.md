@@ -23,12 +23,12 @@ This project focuses on configuring and managing the Uncomplicated Firewall (UFW
 <h2>Program walk-through:</h2>
 
 <p align="center">
-In this step, I used the tcpdump command to capture and analyze network traffic to and from google.com. By running sudo tcpdump -c 10 -#XXtttt host google.com, I captured 10 packets, ensuring the data was displayed in both hexadecimal and ASCII formats for detailed examination. The use of high-precision timestamps and packet counters provided clear tracking of the captured traffic, offering a structured view of the interactions with google.com. : <br/>
-<img src="https://imgur.com/NIIYMZw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The first step in configuring the UFW Firewall is to ensure the system is up-to-date. This is done by running sudo apt update to refresh the package list and sudo apt upgrade to install the latest updates. Keeping the system updated ensures compatibility and security for subsequent firewall configurations. : <br/>
+<img src="https://i.imgur.com/HIirxt5.png" height="80%" width="80%" alt="Disk Sanitisation"/>
 <br />
 <br />
-I used tcpdump to capture traffic to and from google.com and saved it to a file named capture.cpap using the -w option. To automate logging, I created a script watchdog.sh that monitored traffic and managed sequential dump files, with each file limited to 100 bytes in size using the -C 1 flag. The script ensured efficient and organized logging of captured data. :  <br/>
-<img src="https://imgur.com/xrM9S7u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The next step is to install UFW using the package manager. Running sudo apt install ufw ensures the firewall utility is installed and ready for configuration. This step provides the foundational tool required to manage and enforce firewall rules effectively. :  <br/>
+<img src="https://i.imgur.com/J5KzNAa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 I tested the functionality of watchdog.sh to ensure it effectively captured and logged network traffic as intended. This involved running the script, verifying that sequential dump files were created correctly based on the specified size limit, and confirming the captured data was accurate and complete. : <br/>
