@@ -61,22 +61,16 @@ Logging is enabled with sudo ufw logging on to monitor firewall activity and tra
 <img src="https://i.imgur.com/qPqHBRY.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-Observe the decrypted data:  <br/>
-<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The available application profiles are listed using sudo ufw app list, providing predefined configurations for common services. Nginx Full is allowed with sudo ufw allow 'Nginx Full', enabling HTTP and HTTPS traffic. This configuration is particularly beneficial in a home lab environment, facilitating web server setup and testing with secure and efficient traffic management. :  <br/>
+<img src="https://i.imgur.com/KFrxUZG.png" height="80%" width="80%"
+<br/>
+<img src="https://i.imgur.com/lsToXr8.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-Observe the decrypted data:  <br/>
-<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The UFW configuration is tested by performing an Nmap scan from another machine to check for open ports. This ensures that only the intended ports and services are accessible, verifying the effectiveness of the firewall rules in securing the system. :  <br/>
+<img src="https://i.imgur.com/ItTi9J7.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-Observe the decrypted data:  <br/>
-<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the decrypted data:  <br/>
-<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the decrypted data:  <br/>
-<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The effectiveness of UFW in blocking unauthorized traffic and allowing specific ports is verified by reviewing logs with journalctl. This analysis confirms that the firewall is functioning as intended, providing a clear record of permitted and denied connections. :  <br/>
+<img src="https://i.imgur.com/fbiWlJC.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 </p>
