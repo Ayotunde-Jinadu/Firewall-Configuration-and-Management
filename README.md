@@ -45,12 +45,36 @@ Traffic rules are configured to permit necessary services and connections by all
 <img src="https://i.imgur.com/IC8UhIq.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-I configured the protocol by setting the TLS Pre-Master Secret log file, enabling the decryption of captured encrypted traffic. This allowed me to analyze the encrypted data in plain text for detailed examination. :  <br/>
-<img src="https://imgur.com/59yPtaJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Firewall rules are configured to block unwanted traffic by denying specific ports, port ranges, and services. Additional rules restrict access from particular IP addresses and subnets to enhance security and prevent unauthorized connections. These denials ensure tighter control over network traffic and protect the system from potential threats. :  <br/>
+<img src="https://i.imgur.com/0PLzAwW.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
 <br />
 <br />
-I used Wireshark to review the captured packets and analyze the decrypted data, focusing on the SSL handshake. This allowed me to examine the traffic in various formats, providing a detailed view of the handshake process and encrypted communications. :  <br/>
-<img src="https://imgur.com/EsvGkPU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The firewall's status and active rules are verified using sudo ufw status, with detailed information displayed using the verbose option. Numbered output simplifies rule management, allowing for easy identification and modification of specific rules. :  <br/>
+<img src="https://i.imgur.com/qRTAujQ.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
+<br />
+<br />
+Specific firewall rules are removed using sudo ufw delete, where the rule is identified from the numbered output. This ensures precise management and adjustment of the firewall's configuration as needed. :  <br/>
+<img src="https://i.imgur.com/22a2Ue3.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
+<br />
+<br />
+Logging is enabled with sudo ufw logging on to monitor firewall activity and track permitted or denied connections. Default policies are configured to allow all outgoing traffic and deny all incoming traffic, ensuring a secure baseline while permitting essential outbound communication. :  <br/>
+<img src="https://i.imgur.com/qPqHBRY.png" height="80%" width="80%" alt="Firewall Configuration Steps"/>
+<br />
+<br />
+Observe the decrypted data:  <br/>
+<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Observe the decrypted data:  <br/>
+<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Observe the decrypted data:  <br/>
+<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Observe the decrypted data:  <br/>
+<img src="https://imgur.com/e34VzbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Observe the decrypted data:  <br/>
